@@ -16,6 +16,7 @@ public class Lot {
 	private final int SECTION_WIDTH = CAR_COLUMN_WIDTH + LANE_WIDTH + TRUCK_COLUMN_WIDTH + MOTORCYCLE_LANE_WIDTH
 			+ MOTORCYCLE_COLUMN_WIDTH;
 
+
 	public Lot(int length, int width) {
 		super();
 		this.length = length;
@@ -30,7 +31,6 @@ public class Lot {
 		
 		String fullSections = Integer.toString(width / SECTION_WIDTH);
 		int remainingSpace = width % SECTION_WIDTH;
-		System.out.println(remainingSpace);
 
 		char extraLanes = ' ';
 
@@ -86,5 +86,27 @@ public class Lot {
 		return truckColumns;
 	}
 
+	public int getCAR_COLUMN_WIDTH() {
+		return CAR_COLUMN_WIDTH;
+	}
 
+	public int getLANE_WIDTH() {
+		return LANE_WIDTH;
+	}
+
+	public int getTRUCK_COLUMN_WIDTH() {
+		return TRUCK_COLUMN_WIDTH;
+	}
+
+	public int getMOTORCYCLE_COLUMN_WIDTH() {
+		return MOTORCYCLE_COLUMN_WIDTH;
+	}
+
+	public int getMOTORCYCLE_LANE_WIDTH() {
+		return MOTORCYCLE_LANE_WIDTH;
+	}
+
+	public int getSECTION_WIDTH() {
+		return SECTION_WIDTH;
+	}
 }

@@ -1,37 +1,39 @@
 package model;
 
 public abstract class Vehicle {
-	
+
 	private String licensePlateNumber;
 	private String color;
-	private int vehicleClass;
-	private int spaceNumber;
 	private Attendant checkInAttendant;
-	
-	public Vehicle(String licensePlateNumber, String color, Attendant checkInAttendant, int vehicleClass, int spaceNumber) {
+
+	public Vehicle(String licensePlateNumber, String color, Attendant checkInAttendant) {
 		super();
 		this.licensePlateNumber = licensePlateNumber;
 		this.color = color;
-		this.vehicleClass = vehicleClass;
-		this.spaceNumber = assignSpaceNumber(vehicleClass);
+		this.checkInAttendant = checkInAttendant;
 	}
-	
-	private int assignSpaceNumber(int vehicleClass) {
-		
-		return 0;
+
+	public Attendant getCheckInAttendant() {
+		return checkInAttendant;
+	}
+
+	public void setCheckInAttendant(Attendant checkInAttendant) {
+		this.checkInAttendant = checkInAttendant;
 	}
 
 	public String getLicensePlateNumber() {
 		return licensePlateNumber;
 	}
+
 	public void setLicensePlateNumber(String licensePlateNumber) {
 		this.licensePlateNumber = licensePlateNumber;
 	}
+
 	public String getColor() {
 		return color;
 	}
+
 	public void setColor(String color) {
 		this.color = color;
 	}
-
 }
