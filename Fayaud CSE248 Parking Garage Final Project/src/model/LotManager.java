@@ -29,7 +29,7 @@ public class LotManager {
 		
 		for (int row = 0; row < carColumns; row++) {
 			for (int column = 0; column < carsPerColumn; column++) {
-				CarParkingSpace space = new CarParkingSpace(section + Integer.toString(column));
+				CarParkingSpace space = new CarParkingSpace("C - " + section + Integer.toString(column));
 				space.setDistanceToExit(calculateDistanceToExit(row, column, 0));	
 				spaces.add(space);
 			}
@@ -55,7 +55,7 @@ public class LotManager {
 		
 		for (int row = 0; row < truckColumns; row++) {
 			for (int column = 0; column < trucksPerColumn; column++) {
-				TruckParkingSpace space = new TruckParkingSpace(section + Integer.toString(column));
+				TruckParkingSpace space = new TruckParkingSpace("T - " + section + Integer.toString(column));
 				space.setDistanceToExit(calculateDistanceToExit(row, column, 1));
 				spaces.add(space);
 			}
@@ -81,7 +81,7 @@ public class LotManager {
 		
 		for (int row = 0; row < motorcycleColumns; row++) {
 			for (int column = 0; column < motorcyclesPerColumn; column++) {
-				MotorcycleParkingSpace space = new MotorcycleParkingSpace(Integer.toString(column) + section);
+				MotorcycleParkingSpace space = new MotorcycleParkingSpace("M - " + section + Integer.toString(column));
 				space.setDistanceToExit(calculateDistanceToExit(row, column, 2));		
 				spaces.add(space);
 			}

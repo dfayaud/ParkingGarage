@@ -26,7 +26,7 @@ class LotManagerTest {
 	
 	@Test
 	void motorcyclePopLotManagerTest() {
-		LotManager lotManager = new LotManager(new Lot(100, 60));
+		LotManager lotManager = new LotManager(new Lot(100, 80));
 		while(!lotManager.getStackManager().getMotorcycleSpaceStack().isEmpty()) {
 			MotorcycleParkingSpace space = lotManager.getStackManager().getMotorcycleSpaceStack().pop();
 			System.out.println(space.getSpaceNumber() + "  " + space.getDistanceToExit());

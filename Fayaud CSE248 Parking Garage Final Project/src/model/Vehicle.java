@@ -11,6 +11,7 @@ public abstract class Vehicle {
 	private String licensePlateNumber;
 	private Date timeAndDate;
 	private Attendant checkInAttendant;
+	private ParkingSpace space;
 
 	public Vehicle(String licensePlateNumber) {
 		super();
@@ -41,6 +42,18 @@ public abstract class Vehicle {
 	public Date generateTimeAndDate() {
 		Date date = Calendar.getInstance().getTime();
 		return date;
+	}
+
+	public ParkingSpace getSpace() {
+		return space;
+	}
+
+	public void setSpace(ParkingSpace space) {
+		this.space = space;
+	}
+
+	public void setTimeAndDate(Date timeAndDate) {
+		this.timeAndDate = timeAndDate;
 	}
 
 	
