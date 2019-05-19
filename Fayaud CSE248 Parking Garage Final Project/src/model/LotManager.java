@@ -1,10 +1,11 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class LotManager {
+public class LotManager implements Serializable{
 	private Lot lot;
 	private ParkingSpaceStackManager stackManager;
 

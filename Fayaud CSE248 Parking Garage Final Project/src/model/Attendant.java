@@ -1,6 +1,8 @@
 package model;
 
-public class Attendant {
+import java.io.Serializable;
+
+public class Attendant implements Serializable{
 	private String attendantName;
 	private String attendantPassword;
 	

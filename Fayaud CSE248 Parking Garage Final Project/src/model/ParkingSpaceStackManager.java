@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Stack;
 
-public class ParkingSpaceStackManager {
+public class ParkingSpaceStackManager implements Serializable {
 	
 	private Stack <CarParkingSpace> carSpaceStack;
 	private Stack <TruckParkingSpace>truckSpaceStack;

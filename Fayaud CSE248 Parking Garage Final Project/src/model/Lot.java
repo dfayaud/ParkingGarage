@@ -1,6 +1,8 @@
 package model;
 
-public class Lot {
+import java.io.Serializable;
+
+public class Lot implements Serializable{
 
 	private int length;
 	private int width;

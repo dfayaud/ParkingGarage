@@ -1,12 +1,13 @@
 package model;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Serializable {
 
 	private String licensePlateNumber;
 	private Date timeAndDate;
@@ -55,6 +56,7 @@ public abstract class Vehicle {
 	public void setTimeAndDate(Date timeAndDate) {
 		this.timeAndDate = timeAndDate;
 	}
+	
 
 	
 }

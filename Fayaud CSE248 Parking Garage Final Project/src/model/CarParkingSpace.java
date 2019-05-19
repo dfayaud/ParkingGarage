@@ -1,6 +1,8 @@
 package model;
 
-public class CarParkingSpace extends ParkingSpace {
+import java.io.Serializable;
+
+public class CarParkingSpace extends ParkingSpace implements Serializable{
 
 	private final int CAR_SPACE_WIDTH = 10;
 	private final int CAR_SPACE_LENGTH = 14;

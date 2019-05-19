@@ -2,11 +2,12 @@ package model;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class TicketManager {
+public class TicketManager implements Serializable {
 	private String checkInAttendant;
 	private Date checkInTimeAndDate;
 	private Date checkOutTimeAndDate;

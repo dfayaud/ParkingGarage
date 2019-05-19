@@ -1,9 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class PersonnelManager {
+public class PersonnelManager implements Serializable {
 
 	private HashMap<String, Attendant> attendants;
 	private final String MANAGER_PASSWORD = "123456";
