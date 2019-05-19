@@ -1,16 +1,25 @@
 package model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 public abstract class Vehicle {
 
 	private String licensePlateNumber;
-	private String color;
+	private Date timeAndDate;
 	private Attendant checkInAttendant;
 
-	public Vehicle(String licensePlateNumber, String color, Attendant checkInAttendant) {
+	public Vehicle(String licensePlateNumber) {
 		super();
 		this.licensePlateNumber = licensePlateNumber;
-		this.color = color;
-		this.checkInAttendant = checkInAttendant;
+		this.timeAndDate = generateTimeAndDate();
+	}
+
+	public Date getTimeAndDate() {
+		return timeAndDate;
 	}
 
 	public Attendant getCheckInAttendant() {
@@ -29,11 +38,10 @@ public abstract class Vehicle {
 		this.licensePlateNumber = licensePlateNumber;
 	}
 
-	public String getColor() {
-		return color;
+	public Date generateTimeAndDate() {
+		Date date = Calendar.getInstance().getTime();
+		return date;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
-	}
+	
 }

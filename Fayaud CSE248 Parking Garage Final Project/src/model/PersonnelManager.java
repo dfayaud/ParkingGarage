@@ -1,45 +1,33 @@
 package model;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class PersonnelManager {
-	
-	private Attendant[] attendants;
-	private String managerPassword = "123456";
-	private int nElems;
-	
+
+	private HashMap<String, Attendant> attendants;
+	private final String MANAGER_PASSWORD = "123456";
+
 	public PersonnelManager() {
-		this.attendants = new Attendant[10];
+		this.attendants = new HashMap<String, Attendant>();
 	}
 
 	public void addAttendant(String attendantName, String attendantPassword) {
 		Attendant attendant = new Attendant(attendantName, attendantPassword);
-		attendants[nElems++] = attendant;
-	
+		attendants.put(attendantName, attendant);
+
 	}
 
-	
-	public Attendant[] getAttendants() {
+	public HashMap<String, Attendant> getAttendants() {
 		return attendants;
 	}
 
-	public void setAttendants(Attendant[] attendants) {
+	public void setAttendants(HashMap<String, Attendant> attendants) {
 		this.attendants = attendants;
 	}
 
-	public String getManagerPassword() {
-		return managerPassword;
+	public String getMANAGER_PASSWORD() {
+		return MANAGER_PASSWORD;
 	}
 
-	public void setManagerPassword(String managerPassword) {
-		this.managerPassword = managerPassword;
-	}
-
-	public int getnElems() {
-		return nElems;
-	}
-
-	public void setnElems(int nElems) {
-		this.nElems = nElems;
-	}
-	
-	
 }
